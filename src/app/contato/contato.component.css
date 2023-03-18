@@ -1,0 +1,35 @@
+.contato {
+  background-color: #e5ccae;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  margin-top: 5%;
+  width: 70%;
+  opacity: 0.9;
+}
+
+span {
+  margin-top: 5%;
+  font-size: 32px;
+  color: white;
+  font-weight: 600;
+}
+
+.botoes {
+  margin-top: 5%;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+
+.botoes > a {
+  color: #293658;
+  font-size: 24px;
+  font-weight: 600;
+}
