@@ -23,6 +23,7 @@
 
 .card.indisponivel:hover {
   cursor: no-drop;
+  pointer-events: none;
   transform: none;
 }
 

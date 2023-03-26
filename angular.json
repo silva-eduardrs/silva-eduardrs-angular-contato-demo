@@ -25,6 +25,13 @@
             "styles": [
               "src/styles.css"
             ],
+            "optimization": true,
+            "outputHashing": "all",
+            "sourceMap": true,
+            "namedChunks": false,
+            "extractLicenses": true,
+            "vendorChunk": false,
+            "buildOptimizer": true,
             "scripts": []
           },
           "configurations": {
@@ -37,10 +44,8 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
+              "sourceMap": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true
