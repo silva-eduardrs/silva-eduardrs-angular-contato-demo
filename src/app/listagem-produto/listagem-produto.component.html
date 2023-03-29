@@ -6,6 +6,7 @@
     class="card"
     *ngFor="let produto of produtos; let i = index"
     [ngClass]="{ selecionado: produto.selecionado }"
+    [routerLink]="['detalhe-produto', produto.id]"
     (click)="adicionarProduto(i)"
   >
     <!-- Exemplo de Vinculação de Propriedade: [src] -->

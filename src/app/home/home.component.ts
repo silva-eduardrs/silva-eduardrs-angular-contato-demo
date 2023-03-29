@@ -7,6 +7,7 @@ import { CardComponent } from '../shared/components/card/card.component';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit, AfterViewInit {
+  //Exemplo de declaração de uma ViewChild
   @ViewChild(CardComponent) card: CardComponent;
 
   constructor() {}
@@ -16,6 +17,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     console.log('card: ', this.card);
   }
 
+  //Exemplo de interação com o lifecycle hook AfterViewInit
   ngAfterViewInit() {
     console.log('ngAfterViewInit');
     console.log('card: ', this.card);
@@ -24,6 +26,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   clickCard(event = 'default') {
     console.log(event);
-    window.alert('clickCard');
+    //window.alert('clickCard');
   }
 }

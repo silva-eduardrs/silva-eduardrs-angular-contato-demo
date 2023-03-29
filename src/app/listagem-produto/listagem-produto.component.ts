@@ -12,12 +12,15 @@ export class ListagemProdutoComponent implements OnInit {
   totalizador = 0;
   carregado = false;
 
+  //Exemplo de injeção de dependência da ProdutosService
   constructor(private produtosService: ProdutosService) {}
 
   ngOnInit() {
     setTimeout(() => {
       this.carregado = true;
     }, 1000);
+
+    //Exemplo de interação com um Observable
     this.produtosService.listarProdutos().subscribe((retorno) => {
       this.produtos = retorno;
     });

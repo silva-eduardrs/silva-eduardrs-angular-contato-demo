@@ -4,6 +4,7 @@ import { Produto } from '../interfaces/produto.interface';
 
 @Injectable()
 export class ProdutosService {
+  //Exemplo de uma construção de objeto para mock utilizando uma interface TypeScript
   private produtos: Array<Produto> = [
     {
       id: 1,
@@ -34,6 +35,7 @@ export class ProdutosService {
   constructor() {}
 
   listarProdutos() {
+    //Exemplo de retorno de um objeto do tipo Observable
     return of(this.produtos);
   }
 

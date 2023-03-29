@@ -6,6 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent implements OnInit {
+  //Exemplo de parametrização de atributos utlizado para receber dados (Input) e para enviar dados/eventos (Output)
   @Input() tituloCard: string;
   @Input() icone: string;
   @Output() cardSelecionado: EventEmitter<any> = new EventEmitter();
@@ -16,6 +17,7 @@ export class CardComponent implements OnInit {
 
   clickCard() {
     console.log('clickCard');
+    //Exemplo do envio do dado tituloCard através de uma variavel de Output (cardSelecionado) para o componente pai
     this.cardSelecionado.emit(this.tituloCard);
   }
 }
