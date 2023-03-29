@@ -4,7 +4,7 @@
     [tituloCard]="'Ver produtos'"
     [icone]="'playlist_add'"
     (cardSelecionado)="clickCard($event)"
-    [routerLink]="['listagem-produto']"
+    [routerLink]="['/listagem-produto']"
   ></app-card>
 
   <!-- Exemplo de redirecionamento [routerLink] para uma rota que não existe no contexto do home.component -->
@@ -12,7 +12,7 @@
     [tituloCard]="'Entre em contato'"
     [icone]="'connect_without_contact'"
     (cardSelecionado)="clickCard($event)"
-    [routerLink]="['detalhe-produto', 'id']"
+    [routerLink]="['/detalhe-produto', 'id']"
   ></app-card>
 
   <!-- Exemplo de redirecionamento [routerLink] para o componente detalhe-produto, dentro do contexto do listagem-produto -->
@@ -20,6 +20,6 @@
     [tituloCard]="'Sobre nós'"
     [icone]="'assignment_ind'"
     (cardSelecionado)="clickCard($event)"
-    [routerLink]="['listagem-produto', 'detalhe-produto', 'sobre-nos']"
+    [routerLink]="['/listagem-produto', 'detalhe-produto', 'sobre-nos']"
   ></app-card>
 </div>
