@@ -39,10 +39,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
         return;
 
       case 'Sobre nós':
-        this.router.navigate([
-          '/contato',
-          { queryParam: { secao: 'sobre-nos' } },
-        ]);
+        this.router.navigate(['/contato'], { queryParams: { page: pageNum } });
         return;
 
       default:

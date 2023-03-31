@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detalhe-produto.component.css']
 })
 export class DetalheProdutoComponent implements OnInit {
+  idProduto: string;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute)) { }
 
   ngOnInit() {
+    this.idProduto = this.route.snapshot.params.idProduto;
+    console.log('snapshot idProduto: ', this.idProduto);
   }
 
 }
