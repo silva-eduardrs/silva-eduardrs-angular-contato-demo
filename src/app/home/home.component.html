@@ -3,16 +3,21 @@
   <app-card
     [tituloCard]="'Ver produtos'"
     [icone]="'playlist_add'"
-    (cardSelecionado)="clickCard($event)"
     [routerLink]="['/listagem-produto']"
   ></app-card>
 
   <!-- Exemplo de redirecionamento [routerLink] para uma rota que não existe no contexto do home.component -->
   <app-card
+    [tituloCard]="'Produto Detalhe'"
+    [icone]="'playlist_add'"
+    (cardSelecionado)="clickCard($event)"
+  ></app-card>
+  
+  <!-- Exemplo de redirecionamento [routerLink] para uma rota que não existe no contexto do home.component -->
+  <app-card
     [tituloCard]="'Entre em contato'"
     [icone]="'connect_without_contact'"
     (cardSelecionado)="clickCard($event)"
-    [routerLink]="['/detalhe-produto', 'id']"
   ></app-card>
 
   <!-- Exemplo de redirecionamento [routerLink] para o componente detalhe-produto, dentro do contexto do listagem-produto -->

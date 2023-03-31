@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   //Exemplo de declaração de uma ViewChild
   @ViewChild(CardComponent) card: CardComponent;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
     console.log('ngOnInit');
@@ -25,7 +25,28 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   clickCard(event = 'default') {
-    console.log(event);
-    //window.alert('clickCard');
+    switch (event) {
+      case 'Produto Detalhe':
+        this.router.navigate([
+          '/listagem-produto',
+          'detalhe-produto',
+          'testeIdProduto',
+        ]);
+        return;
+
+      case 'Entre em contato':
+        this.router.navigate(['/contato']);
+        return;
+
+      case 'Sobre nós':
+        this.router.navigate([
+          '/contato',
+          { queryParam: { secao: 'sobre-nos' } },
+        ]);
+        return;
+
+      default:
+        return;
+    }
   }
 }
