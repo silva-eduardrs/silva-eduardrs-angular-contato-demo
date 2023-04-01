@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { CardComponent } from '../shared/components/card/card.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,20 +14,18 @@ export class HomeComponent implements OnInit, AfterViewInit {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    console.log('ngOnInit');
-    console.log('card: ', this.card);
+    console.log('ngOnInit card: ', this.card);
   }
 
   //Exemplo de interação com o lifecycle hook AfterViewInit
   ngAfterViewInit() {
-    console.log('ngAfterViewInit');
-    console.log('card: ', this.card);
-    //this.card.clickCard();
+    console.log('ngAfterViewInit card: ', this.card);
   }
 
   clickCard(event = 'default') {
     switch (event) {
       case 'Produto Detalhe':
+        //Exemplo redirecionamento para rota com parametro
         this.router.navigate([
           '/listagem-produto',
           'detalhe-produto',
@@ -35,11 +34,15 @@ export class HomeComponent implements OnInit, AfterViewInit {
         return;
 
       case 'Entre em contato':
+        //Exemplo redirecionamento para rota 'simples'
         this.router.navigate(['/contato']);
         return;
 
       case 'Sobre nós':
-        this.router.navigate(['/contato'], { queryParams: { page: pageNum } });
+        //Exemplo redirecionamento para rota com query parametro
+        this.router.navigate(['/contato'], {
+          queryParams: { secao: 'sobre-nos' },
+        });
         return;
 
       default:
