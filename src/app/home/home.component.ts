@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { CardComponent } from '../shared/components/card/card.component';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -11,15 +12,26 @@ export class HomeComponent implements OnInit, AfterViewInit {
   //Exemplo de declaração de uma ViewChild
   @ViewChild(CardComponent) card: CardComponent;
 
-  constructor(private router: Router) {}
+  slip: { id: number, advice: string };
+
+  constructor(private router: Router, private http: HttpClient) {}
 
   ngOnInit() {
     console.log('ngOnInit card: ', this.card);
+    this.buscarConselho();
   }
 
   //Exemplo de interação com o lifecycle hook AfterViewInit
   ngAfterViewInit() {
     console.log('ngAfterViewInit card: ', this.card);
+  }
+
+  //Exemplo de chamada de um endpoint GET via http client
+  buscarConselho() {
+    const url = 'https://api.adviceslip.com/advice';
+    this.http.get<{ slip: { id: number, advice: string }}>(url).subscribe(retorno => {
+      this.slip = retorno.slip;
+    });
   }
 
   clickCard(event = 'default') {

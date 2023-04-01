@@ -27,4 +27,8 @@
     (cardSelecionado)="clickCard($event)"
     [routerLink]="['/listagem-produto', 'detalhe-produto', 'sobre-nos']"
   ></app-card>
+
+  <div class="conselho">
+    <span> {{ slip?.advice }} </span>
+  </div>
 </div>

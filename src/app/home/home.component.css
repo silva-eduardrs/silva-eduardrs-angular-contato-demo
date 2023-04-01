@@ -30,3 +30,16 @@
 .card + .card {
   margin-top: 24px;
 }
+
+.conselho {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.conselho > span {
+  font-size: 12px;
+  font-style: italic;
+  color: #ff9022;
+}
