@@ -18,11 +18,11 @@ const routes: Routes = [
   },
   {
     path: 'contato',
-    component: ContatoComponent,
+    component: ContatoComponent
   },
   {
     path: 'login',
-    component: LoginComponent,
+    component: LoginComponent
   },
   { path: '**', redirectTo: 'home' },
 ];

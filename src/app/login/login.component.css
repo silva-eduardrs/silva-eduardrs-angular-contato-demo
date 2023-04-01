@@ -1,0 +1,17 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+.card-login {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  padding: 42px;
+}
+
+.form-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

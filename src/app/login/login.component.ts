@@ -4,7 +4,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
   // Model para utilização no Template Driven Forms
@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
 
   // Função chamada no onSubmit do Template Driven Forms
   onSubmit() {
+    console.log('Template Driven Forms');
     if (this.loginFormModel.senha !== this.loginFormModel.confirmaSenha) {
       window.alert('erro');
     } else {
@@ -52,6 +53,7 @@ export class LoginComponent implements OnInit {
 
   // Declação do FormGroup para utilização no Reactive Forms
   entrar() {
+    console.log('Reactive Forms');
     if (this.loginForm.value.senha !== this.loginForm.value.confirmaSenha) {
       window.alert('erro');
     } else {

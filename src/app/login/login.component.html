@@ -1,57 +1,65 @@
-<!-- REACTIVE FORM 
-<form (ngSubmit)="entrar()" [formGroup]="loginForm">
-  <div>
-    <label for="name">Nome do usuário</label>
-    <input id="name" name="name" formControlName="nome" />
-  </div>
-  <div>
-    <label for="password">Senha</label>
-    <input id="password" name="password" formControlName="senha" />
-  </div>
-  <div>
-    <label for="confirmPassword">Confirmar senha</label>
-    <input
-      id="confirmPassword"
-      name="confirmPassword"
-      formControlName="confirmaSenha"
-    />
-  </div>
-
-  <button type="submit">Entrar</button>
-  <button (click)="criarForm()">Limpar</button>
-</form>
--->
-<!-- TEMPLATE DRIVEN FORM-->
-
-<form (ngSubmit)="onSubmit()" #loginForm="ngForm">
-  <div>
-    <label for="name">Nome do usuário</label>
-    <input
-      id="name"
-      name="name"
-      [(ngModel)]="loginFormModel.nome"
-      #nome="ngModel"
-    />
-  </div>
-  <div>
-    <label for="password">Senha</label>
-    <input
-      id="password"
-      name="password"
-      [(ngModel)]="loginFormModel.senha"
-      #senha="ngModel"
-    />
-  </div>
-  <div>
-    <label for="confirmPassword">Confirmar senha</label>
-    <input
-      id="confirmPassword"
-      name="confirmPassword"
-      [(ngModel)]="loginFormModel.confirmaSenha"
-      #confirmaSenha="ngModel"
-    />
-  </div>
-
-  <button type="submit">Submit</button>
-  <button type="button" (click)="criarForm()">Limpar</button>
-</form>
+<div class="login-page">
+  <div class="card-login">
+    <!-- REACTIVE FORM 
+    <form (ngSubmit)="entrar()" [formGroup]="loginForm">
+      <div>
+        <label for="name">Nome do usuário</label>
+        <input id="name" name="name" formControlName="nome" />
+      </div>
+      <div>
+        <label for="password">Senha</label>
+        <input id="password" name="password" formControlName="senha" />
+      </div>
+      <div>
+        <label for="confirmPassword">Confirmar senha</label>
+        <input
+          id="confirmPassword"
+          name="confirmPassword"
+          formControlName="confirmaSenha"
+        />
+      </div>
+    
+      <div class="form-btn">
+        <button type="submit">Entrar</button>
+        <button (click)="criarForm()">Limpar</button>
+      </div>
+    </form>
+    -->
+    <!-- TEMPLATE DRIVEN FORM-->
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <div>
+        <label for="name">Nome do usuário</label>
+        <input
+          id="name"
+          name="name"
+          [(ngModel)]="loginFormModel.nome"
+          #nome="ngModel"
+        />
+      </div>
+      <div>
+        <label for="password">Senha</label>
+        <input
+          id="password"
+          name="password"
+          [(ngModel)]="loginFormModel.senha"
+          #senha="ngModel"
+        />
+      </div>
+      <div>
+        <label for="confirmPassword">Confirmar senha</label>
+        <input
+          id="confirmPassword"
+          name="confirmPassword"
+          [(ngModel)]="loginFormModel.confirmaSenha"
+          #confirmaSenha="ngModel"
+        />
+      </div>
+    
+      <div class="form-btn">
+        <button type="submit">Entrar</button>
+        <button type="button" (click)="criarForm()">Limpar</button>
+      </div>
+    </form>
+    
+  </div>  
+</div>
