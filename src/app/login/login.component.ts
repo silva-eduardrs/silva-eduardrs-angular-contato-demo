@@ -7,31 +7,32 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  /*
-  loginFormModel: { nome: string; senha: string; confirmaSenha: string; } = {
+  // Model para utilização no Template Driven Forms
+  loginFormModel: { nome: string; senha: string; confirmaSenha: string } = {
     nome: '',
     senha: '',
     confirmaSenha: '',
   };
-  */
+  // Declação do FormGroup para utilização no Reactive Forms
   loginForm!: FormGroup;
 
   constructor() {}
 
   ngOnInit() {
-    //this.resetFormTemplate();
+    this.resetFormTemplate();
     this.criarForm();
   }
 
-  /*
+  // Função para reset na model do Template Driven Forms
   resetFormTemplate() {
     this.loginFormModel = {
       nome: '',
       senha: '',
       confirmaSenha: '',
-    }
+    };
   }
-  */
+
+  // Função para inicialização do form no Reactive Forms
   criarForm() {
     this.loginForm = new FormGroup({
       nome: new FormControl(''),
@@ -40,15 +41,16 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  /*
-  onSumit() {
+  // Função chamada no onSubmit do Template Driven Forms
+  onSubmit() {
     if (this.loginFormModel.senha !== this.loginFormModel.confirmaSenha) {
       window.alert('erro');
     } else {
       window.alert('ok');
     }
   }
-  */
+
+  // Declação do FormGroup para utilização no Reactive Forms
   entrar() {
     if (this.loginForm.value.senha !== this.loginForm.value.confirmaSenha) {
       window.alert('erro');
