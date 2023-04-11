@@ -20,13 +20,13 @@ const routes: Routes = [
     canActivate: [AcessoGuard]
   },
   {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
     path: 'contato',
     component: ContatoComponent,
     canActivate: [AcessoGuard]
-  },
-  {
-    path: 'login',
-    component: LoginComponent
   },
   { path: '**', redirectTo: 'home' },
 ];
